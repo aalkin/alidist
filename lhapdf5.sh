@@ -1,7 +1,7 @@
 package: lhapdf5
 version: "%(tag_basename)s"
 tag: v5.9.1-alice1
-source: https://github.com/alisw/LHAPDF
+source: https://github.com/aalkin/LHAPDF
 env:
   LHAPATH: "$LHAPDF5_ROOT/share/lhapdf"
 requires:
@@ -19,7 +19,7 @@ make install
 
 PDFSETS="cteq6l cteq6ll CT10 CT10nlo MSTW2008nnlo EPS09LOR_208 EPS09NLOR_208"
 pushd $INSTALLROOT/share/lhapdf
-  $INSTALLROOT/bin/lhapdf-getdata $PDFSETS
+  $INSTALLROOT/bin/lhapdf-getdata --repo="https://www.hepforge.org/archive/lhapdf/pdfsets/5.9.1" $PDFSETS
   # Check if PDF sets were really installed
   for P in $PDFSETS; do
     ls ${P}*

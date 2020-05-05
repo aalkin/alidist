@@ -20,7 +20,6 @@ env:
     seaborn==0.9.0
     sklearn-evaluation==0.4
     Keras==2.2.4
-    tensorflow==1.13.1
     xgboost==0.82
     dryable==1.0.3
     responses==0.10.6

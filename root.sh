@@ -113,6 +113,7 @@ cmake $SOURCEDIR                                                                
       ${CXX11:+-Dcxx11=ON}                                                             \
       ${CXX14:+-Dcxx14=ON}                                                             \
       ${CXX17:+-Dcxx17=ON}                                                             \
+      -Dimt=OFF                                                                        \
       -Dfreetype=ON                                                                    \
       -Dbuiltin_freetype=OFF                                                           \
       -Dpcre=OFF                                                                       \

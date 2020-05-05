@@ -23,6 +23,7 @@ cmake $SOURCEDIR -DCMAKE_INSTALL_PREFIX=$INSTALLROOT      \
                  ${CXXSTD:+-DCMAKE_CXX_STANDARD=$CXXSTD}  \
                  -DCMAKE_SKIP_RPATH=TRUE \
 		 ${SPECIALFFLAGS:+-DCMAKE_Fortran_FLAGS="-fallow-argument-mismatch -fallow-invalid-boz"}
+>>>>>>> 908ca8f... Fix for GEANT3 build with gcc10
 make ${JOBS:+-j $JOBS} install
 
 [[ ! -d $INSTALLROOT/lib64 ]] && ln -sf lib $INSTALLROOT/lib64

@@ -25,6 +25,7 @@ cmake $SOURCEDIR -DCMAKE_INSTALL_PREFIX=$INSTALLROOT       \
                  -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE      \
                  -DCMAKE_SKIP_RPATH=TRUE \
 		 ${SPECIALFFLAGS:+-DCMAKE_Fortran_FLAGS="-fallow-argument-mismatch"}
+>>>>>>> 8cd553d... Fix for AEGIS build with gcc10
 cmake --build . -- ${JOBS:+-j$JOBS} install
 
 # Modulefile

@@ -103,7 +103,7 @@ cmake ./src_tmp/cpp                                                             
       -DARROW_GANDIVA=ON                                                                            \
       -DARROW_COMPUTE=ON                                                                            \
       -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON                                                        \
-      -DCLANG_EXECUTABLE=${CLANG_ROOT}/bin-safe/clang
+      -DCLANG_EXECUTABLE=`which clang`
 
 make ${JOBS:+-j $JOBS}
 make install

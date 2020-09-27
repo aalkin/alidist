@@ -8,6 +8,9 @@ requires:
  - "GCC-Toolchain:(?!osx)"
 build_requires:
  - CMake
+prefer_system: "(?!osx)"
+prefer_system_check: |
+   which clang 2>&1 > /dev/null
 ---
 #!/bin/sh
 

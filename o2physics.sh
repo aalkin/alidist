@@ -23,6 +23,11 @@ incremental_recipe: |
   mkdir -p $INSTALLROOT/etc/modulefiles && rsync -a --delete etc/modulefiles/ $INSTALLROOT/etc/modulefiles
 ---
 #!/bin/sh
+CMAKE_BUILD_TYPE=DEBUG
+if [[ $ALIBUILD_O2PHYSICS_TESTS ]]; then
+  # Impose extra errors.
+  CXXFLAGS="${CXXFLAGS} -Werror -Wno-error=deprecated-declarations"
+fi
 
 case $ARCHITECTURE in
   osx*)

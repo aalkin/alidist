@@ -183,6 +183,7 @@ if [[ -n $ONNXRUNTIME_REVISION ]]; then
   source $ONNXRUNTIME_ROOT/etc/ort-init.sh
 fi
 
+CMAKE_BUILD_TYPE=DEBUG
 # Making sure people do not have SIMPATH set when they build fairroot.
 # Unfortunately SIMPATH seems to be hardcoded in a bunch of places in
 # fairroot, so this really should be cleaned up in FairRoot itself for

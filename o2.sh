@@ -130,7 +130,7 @@ valid_defaults:
 ---
 #!/bin/sh
 export ROOTSYS=$ROOT_ROOT
-
+CMAKE_BUILD_TYPE=DEBUG
 # Making sure people do not have SIMPATH set when they build fairroot.
 # Unfortunately SIMPATH seems to be hardcoded in a bunch of places in
 # fairroot, so this really should be cleaned up in FairRoot itself for

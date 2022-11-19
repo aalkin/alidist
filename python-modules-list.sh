@@ -104,8 +104,8 @@ env:
     scipy==1.9.3
     Cython==0.29.21
     seaborn==0.11.0
-    scikit-learn==0.24.1
-    sklearn-evaluation==0.8.1
+    scikit-learn
+    sklearn-evaluation
     Keras==2.4.3
     xgboost==1.2.0
     dryable==1.0.5

@@ -5,6 +5,9 @@ source: https://github.com/curl/curl.git
 build_requires:
   - "OpenSSL:(?!osx)"
   - alibuild-recipe-tools
+prefer_system: .*
+prefer_system_check: |
+  exit 0;
 ---
 #!/bin/bash -e
 

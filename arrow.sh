@@ -61,15 +61,16 @@ rsync -a --exclude='**/.git' --delete --delete-excluded "$SOURCEDIR/" ./src_tmp/
 
 case $ARCHITECTURE in
   osx*)
-   # use default llvm from homebrew if available
-   if [ -d "$(brew --prefix llvm)" ]; then
-     CLANG_EXECUTABLE="$(brew --prefix llvm)/bin/clang"
-   else
-     # fall back to llvm@17
-     if [ -d "$(brew --prefix llvm)@17" ]; then
-       CLANG_EXECUTABLE="$(brew --prefix llvm)@17/bin/clang"
-     fi
-   fi
+    # use llvm@18
+    if [ -d "$(brew --prefix llvm)@18" ]; then
+      CLANG_EXECUTABLE="$(brew --prefix llvm)@18/bin/clang"
+    fi
+    # fall back to llvm@17
+    if [ -d "$(brew --prefix llvm)@17" ]; then
+      CLANG_EXECUTABLE="$(brew --prefix llvm)@17/bin/clang"
+    fi
+    echo "Need llvm@18 or llvm@17"
+    exit 1
    ;;
   *)
    CLANG_EXECUTABLE="${CLANG_ROOT}/bin-safe/clang"

@@ -16,9 +16,9 @@ incremental_recipe: |
 #!/bin/bash -e
 case $ARCHITECTURE in
   osx*)
-    # use compatible llvm@20 from brew, if available. This
+    # use compatible llvm from brew, if available. This
     # must match the prefer_system_check in clang.sh
-    CLANG_ROOT=`brew --prefix llvm@20`
+    CLANG_ROOT=`brew --prefix llvm`
   ;;
     *) ;;
 esac

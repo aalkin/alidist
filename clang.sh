@@ -15,7 +15,7 @@ env:
 prefer_system: (osx.*)
 prefer_system_check: |
   # Must be kept in sync with the arrow.sh check for clang!
-  brew --prefix --installed llvm@20 > /dev/null 2>&1
+  brew --prefix --installed llvm > /dev/null 2>&1
 ---
 #!/bin/bash -e
 

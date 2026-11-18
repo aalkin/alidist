@@ -1,6 +1,6 @@
 package: ROOT
 version: "%(tag_basename)s"
-tag: "v6-36-10-alice4"
+tag: "v6-40-04-alice6"
 source: https://github.com/alisw/root.git
 license: LGPLv2.1
 requires:
@@ -156,6 +156,7 @@ case $PKG_VERSION in
   v6[-.]30*) EXTRA_CMAKE_OPTIONS="-Dminuit2=ON -Dpythia6=ON -Dpythia6_nolink=ON" ;;
   v6[-.]32[-.]0[6789]*) EXTRA_CMAKE_OPTIONS="-Dminuit=ON -Dpythia6=ON -Dpythia6_nolink=ON -Dproof=ON" ;;
   v6[-.]36[-.][0-9]*) EXTRA_CMAKE_OPTIONS="-Dminuit=ON -Dpythia6=ON -Dpythia6_nolink=ON -Dproof=ON -Dgeombuilder=ON" ;;
+  v6[-.]40[-.][0-9]*) EXTRA_CMAKE_OPTIONS="-Dminuit=ON -Dpythia6=ON -Dpythia6_nolink=ON -Dgeombuilder=ON" ;;
   *) EXTRA_CMAKE_OPTIONS="-Dminuit=ON" ;;
 esac
 
